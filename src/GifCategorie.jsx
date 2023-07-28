@@ -5,10 +5,10 @@ import {InputGif} from "./gif/components";
 import {Gifitem}  from "./gif/components";
 
 
-const  GifCategorie= ({categoria}:any)=>{
+const  GifCategorie= ({categoria})=>{
     const [categorie, setCategories]=useState(categoria);
 
-    const onAddCategory = ( newCategory :any ) => {
+    const onAddCategory = ( newCategory ) => {
         //hace el componente del nuevo valor unico 
         if ( categorie.includes(newCategory) ) return;
 
@@ -21,10 +21,10 @@ const  GifCategorie= ({categoria}:any)=>{
          <>
          <h2 style={{color:'#1616b7'}}>Listado de gif por categoria</h2>
          <hr/>
-         {<InputGif onNewCategory={ (value :any) => onAddCategory(value)}/>}
+         {<InputGif onNewCategory={ (value ) => onAddCategory(value)}/>}
           {
         
-          categorie.map((item:any)=>(
+          categorie.map((item)=>(
            <Gifitem item={item} key={item}/>
           
           ))}

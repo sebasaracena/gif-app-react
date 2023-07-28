@@ -6,15 +6,15 @@ import { useState } from 'react';
 
 
 
-export const InputGif=({onNewCategory}:any)=>{
+export const InputGif=({onNewCategory})=>{
     const [inputCategorie,setInputCategorie]=useState('');
 
-    const onInputChange = ({ target }:any) => {
+    const onInputChange = ({ target } ) => {
         setInputCategorie( target.value );
     }
 
     
-    const onSubmit = ( event:any ) => {
+    const onSubmit = ( event ) => {
         
         event.preventDefault();
         if( inputCategorie.trim().length <= 1) return;
