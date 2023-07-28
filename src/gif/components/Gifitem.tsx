@@ -36,7 +36,7 @@ export const Gifitem=({item}:any)=>{
              ))}
              <div className='d-flex  justify-content-center mt-4'>
             
-              <Pagination>{items}</Pagination>
+              {/*<Pagination>{items}</Pagination>*/}
             </div>
            </Card.Body>
          </Card>
